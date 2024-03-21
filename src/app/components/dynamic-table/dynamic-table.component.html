@@ -1,0 +1,61 @@
+<table>
+  
+  <thead>
+    <tr>
+      <th *ngFor="let column of cols" [style.color]="column.color">{{ column.name }}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <td *ngFor="let column of columns">
+        <!-- Would be nice to use types from model -->
+        separate component ->  <ng-container *ngIf="!type.included(column.type); else default">
+
+          
+          separate component -> <button *ngIf="column.type === 'button' [style.color]="column.color" *ngIf="column.val === 'id'">{{ row[column.val] }}</button>
+          
+          <input *ngIf="column.type === 'input'" type="text" [value]="row[column.val] || ''">
+          <span *ngIf="column.type === 'text'">{{ row[column.val] }}</span>
+          
+          separate component -> <button *ngIf="column.type === 'button' [style.color]="column.color" *ngIf="column.val === 'id'">{{ row[column.val] }}</button>
+          
+          <input *ngIf="column.type === 'input'" type="text" [value]="row[column.val] || ''">
+          <span *ngIf="column.type === 'text'">{{ row[column.val] }}</span>
+          
+          separate component -> <button *ngIf="column.type === 'button' [style.color]="column.color" *ngIf="column.val === 'id'">{{ row[column.val] }}</button>
+          
+          <input *ngIf="column.type === 'input'" type="text" [value]="row[column.val] || ''">
+          <span *ngIf="column.type === 'text'">{{ row[column.val] }}</span>
+          
+          separate component -> <button *ngIf="column.type === 'button' [style.color]="column.color" *ngIf="column.val === 'id'">{{ row[column.val] }}</button>
+          
+          <input *ngIf="column.type === 'input'" type="text" [value]="row[column.val] || ''">
+          <span *ngIf="column.type === 'text'">{{ row[column.val] }}</span>
+          
+          separate component -> <button *ngIf="column.type === 'button' [style.color]="column.color" *ngIf="column.val === 'id'">{{ row[column.val] }}</button>
+          
+          <input *ngIf="column.type === 'input'" type="text" [value]="row[column.val] || ''">
+          <span *ngIf="column.type === 'text'">{{ row[column.val] }}</span>
+          
+          separate component -> <button *ngIf="column.type === 'button' [style.color]="column.color" *ngIf="column.val === 'id'">{{ row[column.val] }}</button>
+          
+          <input *ngIf="column.type === 'input'" type="text" [value]="row[column.val] || ''">
+          <span *ngIf="column.type === 'text'">{{ row[column.val] }}</span>
+          
+          separate component -> <button *ngIf="column.type === 'button' [style.color]="column.color" *ngIf="column.val === 'id'">{{ row[column.val] }}</button>
+          
+          <input *ngIf="column.type === 'input'" type="text" [value]="row[column.val] || ''">
+          <span *ngIf="column.type === 'text'">{{ row[column.val] }}</span>
+          
+          
+          <ng-template #default>
+  text
+          </ng-template>
+
+        </ng-container>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
